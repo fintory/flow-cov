@@ -1,5 +1,3 @@
-// @flow
-
 const chalk = require('chalk')
 
 const fixes = {
@@ -27,7 +25,7 @@ module.exports = function logError(error) {
 
   if (fixes[error]) {
     console.log(chalk.bold('Try one of the following things to fix the issue:'))
-    fixes[error].map((err, index) => {
+    fixes[error].forEach((err, index) => {
       console.log(`${index + 1}. ${err}`)
     })
   }
