@@ -19,7 +19,7 @@ async function run() {
     if (resp.totalCoverageSatisfied) {
       process.exit(0)
     } else {
-      process.exit(1)
+      process.exit(127)
     }
   } catch (err) {
     return logError(err)
