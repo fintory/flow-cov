@@ -21,8 +21,6 @@ module.exports = function logError(error) {
   console.error(chalk.red(chalk.bold('An error happened, while executing `flow-cov`:')))
   console.error(chalk.red(`${error}\n`))
 
-  console.log(error)
-
   if (fixes[error]) {
     console.log(chalk.bold('Try one of the following things to fix the issue:'))
     fixes[error].forEach((err, index) => {
