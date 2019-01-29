@@ -7,10 +7,11 @@
   "author": "Nick Schmidt <nick@kreativgebiet.com>",
   "license": "MIT",
   "private": false,
-  "bin": "./bin/index.js",
+  "bin": "bin/index.js",
   "dependencies": {
     "chalk": "^2.4.2",
     "cli-table2": "^0.2.0",
+    "commander": "^2.19.0",
     "fast-glob": "^2.2.6",
     "flow-annotation-check": "^1.10.1",
     "flow-bin": "^0.91.0"

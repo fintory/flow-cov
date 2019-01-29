@@ -2,7 +2,7 @@
 
 const program = require('commander')
 const pkg = require('../package.json')
-const runCoverageTool = require('../lib')
+const logError = require('./utils/logError')
 
 program
   .version(pkg.version)
@@ -10,4 +10,20 @@ program
   .option('-v, --verbose', 'Run `flow-cov` in verbose mode')
   .parse(process.argv)
 
-runCoverageTool()
+// eslint-disable-next-line
+async function run() {
+  try {
+    const runCoverageTool = require('../lib')
+    const resp = await runCoverageTool()
+
+    if (resp.totalCoverageSatisfied) {
+      process.exit(0)
+    } else {
+      process.exit(1)
+    }
+  } catch (err) {
+    return logError(err)
+  }
+}
+
+run()

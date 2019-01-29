@@ -31,4 +31,6 @@ module.exports = function logError(error) {
       console.log(`${index + 1}. ${err}`)
     })
   }
+
+  throw new Error(error)
 }
