@@ -14,9 +14,9 @@ program
 async function run() {
   try {
     const runCoverageTool = require('../lib')
-    const resp = await runCoverageTool()
+    const report = await runCoverageTool()
 
-    if (resp.totalCoverageSatisfied) {
+    if (report.coverageSatisfied) {
       process.exit(0)
     } else {
       process.exit(127)
