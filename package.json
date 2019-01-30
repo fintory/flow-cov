@@ -8,6 +8,10 @@
   "license": "MIT",
   "private": false,
   "bin": "bin/index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint ."
+  },
   "dependencies": {
     "chalk": "^2.4.2",
     "cli-table2": "^0.2.0",
