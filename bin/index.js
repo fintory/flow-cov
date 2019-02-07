@@ -14,10 +14,13 @@ program
 async function run() {
   try {
     const runCoverageTool = require('../lib')
-    const configuration = {
-      reporters: program.reporters.split(','),
+    const config = {}
+
+    if (program.reporters) {
+      config.reporters = program.reporters.split(',')
     }
-    const report = await runCoverageTool(configuration)
+
+    const report = await runCoverageTool(config)
 
     if (report.coverageSatisfied) {
       process.exit(0)
