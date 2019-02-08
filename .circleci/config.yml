@@ -56,11 +56,9 @@ workflows:
   build:
     jobs:
       - test-smoke
-      - test-flow
       - release:
           requires:
             - test-smoke
-            - test-flow
           filters:
             branches:
               only: master
