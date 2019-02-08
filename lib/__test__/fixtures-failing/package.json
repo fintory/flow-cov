@@ -1,0 +1,7 @@
+{
+  "flow-cov": {
+    "threshold": 9,
+    "globIncludePatterns": ["./simple.js"],
+    "reporters": ["text"]
+  }
+}

@@ -1,8 +1,12 @@
 {
   "name": "flow-cov",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Your new favorite flow coverage reporting tool.",
   "main": "lib/index.js",
+  "files": [
+    "/lib",
+    "/bin"
+  ],
   "repository": "https://github.com/fintory/flow-cov",
   "author": "Nick Schmidt <nick@kreativgebiet.com>",
   "license": "MIT",
@@ -10,6 +14,7 @@
   "bin": "bin/index.js",
   "scripts": {
     "test": "jest",
+    "coverage": "jest --coverage",
     "lint": "eslint ."
   },
   "dependencies": {

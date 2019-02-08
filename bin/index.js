@@ -6,7 +6,7 @@ const logError = require('./utils/logError')
 
 program
   .version(pkg.version)
-  .option('-r, --reporter <reporters>', 'Specify custom reporters (multiple allowed with comma)')
+  .option('-r, --reporters <reporters>', 'Specify custom reporters (multiple allowed with comma)')
   .option('-v, --verbose', 'Run `flow-cov` in verbose mode')
   .parse(process.argv)
 
@@ -14,7 +14,13 @@ program
 async function run() {
   try {
     const runCoverageTool = require('../lib')
-    const report = await runCoverageTool()
+    const config = {}
+
+    if (program.reporters) {
+      config.reporters = program.reporters.split(',')
+    }
+
+    const report = await runCoverageTool(config)
 
     if (report.coverageSatisfied) {
       process.exit(0)
