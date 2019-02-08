@@ -18,6 +18,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "bluebird": "^3.5.3",
     "chalk": "^2.4.2",
     "cli-table2": "^0.2.0",
     "commander": "^2.19.0",
