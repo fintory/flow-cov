@@ -1,4 +1,5 @@
 module.exports = {
+  maxConcurrency: 1,
   coverageThreshold: {
     global: {
       branches: 60,
