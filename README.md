@@ -1,4 +1,4 @@
-# flow-cov
+![flow-cov](https://s3.eu-central-1.amazonaws.com/github-banner/flow-cov.png)
 
 Your new favorite flow coverage reporting tool.
 
