@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const program = require('commander')
+const chalk = require('chalk')
 const pkg = require('../package.json')
 const logError = require('./utils/logError')
 
@@ -22,6 +23,15 @@ async function run() {
 
     if (!program.progress) {
       process.env.SILENT = true
+    }
+
+    if (program.verbose) {
+      console.log(chalk.red('ATTENTION!'))
+      console.log(chalk.red(`You are currently running in ${chalk.bold('verbose')} mode.`))
+      console.log(chalk.red(`The output is possibly not valid for piping, etc.`))
+      console.log('')
+
+      process.env.DEBUG = true
     }
 
     if (program.threshold) {
