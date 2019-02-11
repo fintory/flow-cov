@@ -24,9 +24,15 @@
     "commander": "^2.19.0",
     "fast-glob": "^2.2.6",
     "flow-annotation-check": "^1.10.1",
-    "flow-bin": "^0.92.0"
+    "flow-bin": "^0.92.0",
+    "progress": "^2.0.3"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/github": "^5.2.10",
+    "@semantic-release/npm": "^5.1.4",
+    "@semantic-release/release-notes-generator": "^7.1.4",
     "babel-eslint": "^10.0.1",
     "eslint": "5.13.0",
     "eslint-config-airbnb": "17.1.0",
@@ -37,6 +43,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.11.0",
     "jest": "^24.0.0",
-    "prettier-eslint": "^8.8.2"
+    "prettier-eslint": "^8.8.2",
+    "semantic-release": "^15.13.3"
   }
 }
