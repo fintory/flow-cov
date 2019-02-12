@@ -2,6 +2,12 @@
 
 [![CircleCI](https://circleci.com/gh/fintory/flow-cov.svg?style=shield)](https://circleci.com/gh/fintory/flow-cov) [![Waffle.io - Columns and their card count](https://badge.waffle.io/fintory/flow-cov.svg?columns=To%20Do)](https://waffle.io/fintory/flow-cov) [![](https://img.shields.io/codeclimate/maintainability/fintory/flow-cov.svg?style=flat)](https://codeclimate.com/github/fintory/flow-cov)
 
+## What is `flow-cov`?
+
+`flow-cov` is aimed to be a tool to collect the flow-coverage of your project, just like you collect the test coverage for your Jest projects. `flow-bin` only has support for collecting coverage from one file at a time. What `flow-cov` does is that it uses globs to find all files you want, runs the command for each file found, and collects coverage and the parts of the files that are not covered. Easy as that.
+
+Unlike jest, istanbul, etc., you sadly cannot post your results to coveralls.io or codecov.io. **Yet!**
+
 ## Command line tool
 
 You can easily use the command line tool we are currently shipping with, by using the following command:
@@ -48,6 +54,38 @@ Not much to say here. Verbose is just saying that everything in the script shoul
 **`--no-progress`**
 
 Suppresses the progress bar output. 
+
+## Configuration
+
+Configuration is very easy and straight forward. Just include the following object in your package.json under the `flow-cov` key. For a specific comment and notes for the configurations, please refer to the "[Options](#options)" part of the README.md
+
+```json
+{
+  "threshold": 90,
+  "globIncludePatterns": ["**/*.js"],
+  "globExcludePatterns": [],
+  "reporters": ["text"],
+  "concurrency": 5
+}
+```
+
+The `package.json` would look something like this then:
+
+```json
+{
+  "name": "your-project-name",
+  "devDependencies": {
+    "flow-cov": "*"
+  },
+  "flow-cov": {
+    "threshold": 90,
+    "globIncludePatterns": ["**/*.js"],
+    "globExcludePatterns": [],
+    "reporters": ["text"],
+    "concurrency": 5
+  }
+}
+```
 
 ## About
 
