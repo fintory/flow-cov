@@ -15,6 +15,9 @@ const fixes = {
   'No reporters were set.': [
     'Seems like you have unset the `reporters` config in your package.json.',
   ],
+  'SyntaxError: Unexpected token U in JSON at position 0': [
+    "Don't use the `--help` flag as `flowArgs` argument.",
+  ],
 }
 
 module.exports = function logError(error) {
@@ -26,7 +29,10 @@ module.exports = function logError(error) {
     fixes[error].forEach((err, index) => {
       console.log(`${index + 1}. ${err}`)
     })
-  }
 
-  throw new Error(error)
+    // Make some space and make it more beautiful
+    console.log('')
+  } else {
+    throw error
+  }
 }
