@@ -12,8 +12,16 @@ Unlike jest, istanbul, etc., you sadly cannot post your results to coveralls.io 
 
 You can easily use the command line tool we are currently shipping with, by using the following command:
 
+```sh
+% flow-cov
 ```
-$ flow-cov
+
+**Using npx**
+
+If you don't want to install a specific version of flow-cov into your project, you are free to use the binary with `npx`, which is installing it locally for the execution. Just try the following command in your project (but be sure to [set the configuration](#configuration) though, otherwise, the default configuration will be used).
+
+```sh
+% npx flow-cov
 ```
 
 ### Options
@@ -26,13 +34,13 @@ The reporters option is used for overwriting the reporters specified in your `pa
 To use it, see the following usage:
 
 ```sh
-$ flow-cov --reporters json
+% flow-cov --reporters json
 ```
 
 You can also supply a list of reporters by seperating the reporters with a `,`:
 
 ```sh
-$ flow-cov --reporters json,text
+% flow-cov --reporters json,text
 ```
 
 **`--concurrency <numberOfFiles>`**
