@@ -56,3 +56,7 @@ Suppresses the progress bar output.
 [We](https://fintory.com/en?ref=flow-cov) almost worked with `flow-coverage-report` for one and a half year now, but at some point felt, like we need some more features and needed to have them evolved quickly. But since the [code frequency](https://github.com/rpl/flow-coverage-report/graphs/code-frequency) and [commit activity](https://github.com/rpl/flow-coverage-report/graphs/commit-activity) slept a little in the last time, we are now creating our very own coverage reporter.
 
 Though, we are starting with a little bare construction of the reporter, the repository is here to live up a little more and by evolving to a better coverage reporter. [We also have a roadmap.](https://github.com/fintory/flow-cov/issues/12)
+
+### Shameless plug
+
+[![Powered by Fintory](https://img.shields.io/badge/Powered%20by-Fintory-2e8eff.svg?style=for-the-badge)](https://fintory.com)
