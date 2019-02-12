@@ -1,6 +1,6 @@
 ![flow-cov – Your new favorite flow coverage reporting tool.](https://s3.eu-central-1.amazonaws.com/github-banner/flow-cov.png)
 
-[![CircleCI](https://circleci.com/gh/fintory/flow-cov.svg?style=shield)](https://circleci.com/gh/fintory/flow-cov) [![Waffle.io - Columns and their card count](https://badge.waffle.io/fintory/flow-cov.svg?columns=To%20Do)](https://waffle.io/fintory/flow-cov) [![](https://img.shields.io/codeclimate/maintainability/fintory/flow-cov.svg?style=flat)](https://codeclimate.com/github/fintory/flow-cov)
+[![CircleCI](https://circleci.com/gh/fintory/flow-cov.svg?style=shield)](https://circleci.com/gh/fintory/flow-cov) [![Coverage Status](https://coveralls.io/repos/github/fintory/flow-cov/badge.svg)](https://coveralls.io/github/fintory/flow-cov) [![Waffle.io - Columns and their card count](https://badge.waffle.io/fintory/flow-cov.svg?columns=To%20Do)](https://waffle.io/fintory/flow-cov) [![](https://img.shields.io/codeclimate/maintainability/fintory/flow-cov.svg?style=flat)](https://codeclimate.com/github/fintory/flow-cov)
 
 ## What is `flow-cov`?
 
