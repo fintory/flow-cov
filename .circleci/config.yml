@@ -38,7 +38,7 @@ jobs:
       - restore-cache: *restore-eslint-cache
       - run: yarn lint
       - save_cache: *save-eslint-cache
-      - run: yarn test
+      - run: yarn coverage
 
   release:
     <<: *defaults
